@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+:root {
+  --font-family: "Spartan", sans-serif;
+
+  --dark-magenta: hsl(300, 43%, 22%);
+  --pink: hsl(333, 80%, 67%);
+
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1200px;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-family);
+  line-height: 1.4;
+  background-color: var(--white);
+  margin: 0 auto;
+
+  background-image: url(/images/bg-pattern-top-mobile.svg);
+  background-repeat: no-repeat;
+}
+main {
+  width: 90%;
+  margin: 2.4em 0;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--dark-magenta);
+  text-align: center;
+  line-height: 1;
+  margin-top: 0.6em;
+  padding-bottom: 1em;
+}
+h2 {
+  font-size: 1rem;
+  color: var(--white);
+}
+img {
+  max-width: 100%;
+}
+p {
+  font-size: 15px;
+  color: var(--dark-grayish-magenta);
+  text-align: center;
+}
+span {
+  color: var(--pink);
+}
+section {
+  margin-top: 2em;
+}
+
+/* Stars Section */
+.stars {
+  background-color: var(--light-grayish-magenta);
+  text-align: center;
+  border-radius: 5px;
+  margin: 0.8em 0;
+  padding-top: 1em;
+  padding-bottom: 1px;
+}
+.star-section p {
+  color: var(--dark-magenta);
+  font-weight: 700;
+}
+
+/* Card Section */
+
+.card-section img {
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+}
+.card-section p {
+  text-align: left;
+  padding-top: 1em;
+
+  color: var(--white);
+  line-height: 1.5;
+}
+
+.card-header {
+  display: flex;
+  gap: 1.4em;
+}
+.heading {
+  margin-top: 2px;
+}
+.card p {
+  padding-top: 2em;
+}
+
+.card-smith {
+  background-color: var(--dark-magenta);
+  padding: 2em;
+  border-radius: 0.4em;
+  margin-top: 1.2em;
+}
+.card-irene {
+  background-color: var(--dark-magenta);
+  padding: 2em;
+  border-radius: 0.4em;
+  margin-top: 1.2em;
+}
+.card-anne {
+  background-color: var(--dark-magenta);
+  padding: 2em;
+  border-radius: 0.4em;
+  margin-top: 1.2em;
+}
+/* -----------Destop design----------] */
+@media (min-width: 750px) {
+  body {
+    background-image: url(/images/bg-pattern-top-desktop.svg),
+      url(/images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: -50em, 14em;
+    margin: 0 auto;
+    padding: 80px 0;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+  }
+  h1 {
+    font-size: 3rem;
+    text-align: left;
+  }
+
+  header {
+    max-width: 480px;
+  }
+  header p {
+    text-align: left;
+    font-size: 1rem;
+    transform: translateY(-2em);
+  }
+  .stars {
+    display: flex;
+    gap: 1.5em;
+    padding: 1em;
+    max-width: 425px;
+  }
+  .second-star {
+    transform: translateX(2.8em);
+    margin-top: 1em;
+  }
+  .third-star {
+    transform: translateX(5.6em);
+    margin-top: 1em;
+  }
+  .card-section {
+    display: flex;
+    gap: 2em;
+  }
+  .card-section p {
+    font-size: 14px;
+    padding-top: 2em;
+  }
+
+  .card-irene {
+    transform: translateY(1em);
+  }
+  .card-anne {
+    transform: translateY(2em);
+  }
+}
